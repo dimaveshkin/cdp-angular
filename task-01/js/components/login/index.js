@@ -1,3 +1,3 @@
-define(["./login.component"], function (LoginComponent) {
-    angular.module("app").component("login", LoginComponent);
+define(["app.module", "./login.component"], function (AppModule, LoginComponent) {
+    AppModule.component("login", LoginComponent);
 });

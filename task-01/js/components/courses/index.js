@@ -1,3 +1,3 @@
-define(["./courses.component"], function (CoursesComponent) {
-    angular.module("app").component("courses", CoursesComponent);
+define(["app.module", "./courses.component"], function (AppModule, CoursesComponent) {
+    AppModule.component("courses", CoursesComponent);
 });

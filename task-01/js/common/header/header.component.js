@@ -2,7 +2,7 @@ define(function () {
     const HeaderComponent = {
         template: `
             <header>
-                Hello world
+                Header
             </header>
           `
     };
