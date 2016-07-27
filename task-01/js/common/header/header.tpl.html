@@ -1,0 +1,9 @@
+<header class="page-header header clearfix">
+    <h1 class="pull-left">CDP Angular
+        <a href="" ng-if="header.loggined" class="page-title btn btn-default" ng-click="header.goToCourses()">Курсы</a>
+        <span ng-if="header.courseTitle" class="page-subtitle h4">> {{header.courseTitle}}</span>
+    </h1>
+        <span class="account-control pull-right h4" ng-if="header.username">
+            {{header.username}} <a href ng-click="header.logout($event)">logoff</a>
+        </span>
+</header>

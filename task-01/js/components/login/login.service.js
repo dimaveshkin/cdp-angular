@@ -1,14 +1,19 @@
 define(function () {
+    var identity = {};
+
     const LoginService = function ($http) {
         return {
-            login: (username, pass, cb) => {
-                return 42;
+            login: (login, pass, cb) => {
+                return $http.post("/api/login", {login, pass});
             },
             logout: () => {
-                return -42;
+                return $http.head("/api/logout");
             },
             isLoggined: () => {
-                return false
+                return !!sessionStorage.getItem("identity");
+            },
+            getUserName: () => {
+                return sessionStorage.getItem("identity");
             }
         };
     }
